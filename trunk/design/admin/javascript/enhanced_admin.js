@@ -4,8 +4,20 @@
  *
  */
 window.addEvent( 'domready', function() {
-	
+	ez_initChildrenNumberOfItems();	
 } );
+
+function ez_initChildrenNumberOfItems()
+{
+	if( $('numberofitems') )
+	{
+		$$('#numberofitems a').each( function (item, index) {
+				item.addEvent( 'click', function( index ) {
+					return ez_adminChildrenNumberOfItems( index + 1 );
+				} );
+		} );
+	}
+}
 
 function fez_adminRestartClassName( path )
 {
@@ -158,7 +170,7 @@ function fez_adminNavigationLocations( link )
  * Update the children
  *
  */
-function fez_adminChildrenNumberOfItems( numberOfItems )
+function ez_adminChildrenNumberOfItems( numberOfItems )
 {
 	fez_adminLoader( 'children_list' );
 	fez_adminRestartClassName( "#numberofitems a" );

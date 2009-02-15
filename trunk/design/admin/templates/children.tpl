@@ -40,9 +40,9 @@
 <div class="block">
 <div class="left">
     <p id="numberofitems">
-    	<a href={'/user/preferences/set/admin_list_limit/1'|ezurl} title="{'Show 10 items per page.'|i18n( 'design/admin/node/view/full' )}"{if $number_of_items|eq(10)} class="current"{/if} onClick="return fez_adminChildrenNumberOfItems(1)">10</a>
-        <a href={'/user/preferences/set/admin_list_limit/2'|ezurl} title="{'Show 25 items per page.'|i18n( 'design/admin/node/view/full' )}"{if $number_of_items|eq(25)} class="current"{/if} onClick="return fez_adminChildrenNumberOfItems(2)">25</a>
-		<a href={'/user/preferences/set/admin_list_limit/3'|ezurl} title="{'Show 50 items per page.'|i18n( 'design/admin/node/view/full' )}"{if $number_of_items|eq(50)} class="current"{/if} onClick="return fez_adminChildrenNumberOfItems(3)">50</a>
+    	<a href={'/user/preferences/set/admin_list_limit/1'|ezurl} title="{'Show 10 items per page.'|i18n( 'design/admin/node/view/full' )}"{if $number_of_items|eq(10)} class="current"{/if}>10</a>
+        <a href={'/user/preferences/set/admin_list_limit/2'|ezurl} title="{'Show 25 items per page.'|i18n( 'design/admin/node/view/full' )}"{if $number_of_items|eq(25)} class="current"{/if}>25</a>
+		<a href={'/user/preferences/set/admin_list_limit/3'|ezurl} title="{'Show 50 items per page.'|i18n( 'design/admin/node/view/full' )}"{if $number_of_items|eq(50)} class="current"{/if}>50</a>
     </p>
 </div>
 <div class="right">
