@@ -48,9 +48,9 @@
 <div class="right">
 	<p id="viewmode">
 		{def $fez_view_mode=ezpreference( 'admin_children_viewmode' )}
-        <a onClick="return fez_adminChildrenViewMode( 'list' )"{if or($fez_view_mode|eq('list'), $fez_view_mode|eq(''))} class="current"{/if} href={'/user/preferences/set/admin_children_viewmode/list'|ezurl} title="{'Display sub items using a simple list.'|i18n( 'design/admin/node/view/full' )}">{'List'|i18n( 'design/admin/node/view/full' )}</a>
-        <a  onClick="return fez_adminChildrenViewMode( 'thumbnail' )"{if $fez_view_mode|eq('thumbnail')} class="current"{/if} href={'/user/preferences/set/admin_children_viewmode/thumbnail'|ezurl} title="{'Display sub items as thumbnails.'|i18n( 'design/admin/node/view/full' )}">{'Thumbnail'|i18n( 'design/admin/node/view/full' )}</a>
-        <a onClick="return fez_adminChildrenViewMode( 'detailed' )"{if $fez_view_mode|eq('detailed')} class="current"{/if} href={'/user/preferences/set/admin_children_viewmode/detailed'|ezurl} title="{'Display sub items using a detailed list.'|i18n( 'design/admin/node/view/full' )}">{'Detailed'|i18n( 'design/admin/node/view/full' )}</a>
+        <a{if or($fez_view_mode|eq('list'), $fez_view_mode|eq(''))} class="current"{/if} href={'/user/preferences/set/admin_children_viewmode/list'|ezurl} title="{'Display sub items using a simple list.'|i18n( 'design/admin/node/view/full' )}">{'List'|i18n( 'design/admin/node/view/full' )}</a>
+        <a{if $fez_view_mode|eq('thumbnail')} class="current"{/if} href={'/user/preferences/set/admin_children_viewmode/thumbnail'|ezurl} title="{'Display sub items as thumbnails.'|i18n( 'design/admin/node/view/full' )}">{'Thumbnail'|i18n( 'design/admin/node/view/full' )}</a>
+        <a{if $fez_view_mode|eq('detailed')} class="current"{/if} href={'/user/preferences/set/admin_children_viewmode/detailed'|ezurl} title="{'Display sub items using a detailed list.'|i18n( 'design/admin/node/view/full' )}">{'Detailed'|i18n( 'design/admin/node/view/full' )}</a>
 		{undef $fez_view_mode}
 	</p>
 </div>

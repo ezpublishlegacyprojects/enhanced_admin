@@ -5,6 +5,7 @@
  */
 window.addEvent( 'domready', function() {
 	ez_initChildrenNumberOfItems();	
+	ez_initChildrenViewMode();
 } );
 
 function ez_initChildrenNumberOfItems()
@@ -16,6 +17,19 @@ function ez_initChildrenNumberOfItems()
 					return ez_adminChildrenNumberOfItems( index + 1 );
 				} );
 		} );
+	}
+}
+
+function ez_initChildrenViewMode()
+{
+	if( $( 'viewmode' ) )
+	{
+		var viewmode = [ 'list', 'thumbnail', 'detailded' ];
+		$$('#viewmode a').each( function( item, index ) {
+			item.addEvent( 'click', function( index ) {
+				return ez_adminChildrenViewMode( viewmode[index] );
+			});
+		});
 	}
 }
 
@@ -178,7 +192,7 @@ function ez_adminChildrenNumberOfItems( numberOfItems )
 	return false;
 }
 
-function fez_adminChildrenViewMode( viewMode )
+function ez_adminChildrenViewMode( viewMode )
 {
 	fez_adminLoader( 'children_list' );
 	fez_adminRestartClassName( "#viewmode a" );
