@@ -1,0 +1,10 @@
+Release 1.0.0 alpha :
+
+Published on 02/15/2009
+
+First release.
+
+Change the treemenu size
+Change the viewmode of the children
+Change the items number of the children
+Change page by page
