@@ -13,9 +13,7 @@ function ez_initChildrenNumberOfItems()
 	if( $('numberofitems') )
 	{
 		$$('#numberofitems a').each( function (item, index) {
-				item.addEvent( 'click', function( index ) {
-					return ez_adminChildrenNumberOfItems( index + 1 );
-				} );
+			item.setAttribute( 'onClick', 'return ez_adminChildrenNumberOfItems( ' + ( index + 1 ) + ')' );
 		} );
 	}
 }
@@ -26,9 +24,7 @@ function ez_initChildrenViewMode()
 	{
 		var viewmode = [ 'list', 'thumbnail', 'detailded' ];
 		$$('#viewmode a').each( function( item, index ) {
-			item.addEvent( 'click', function( index ) {
-				return ez_adminChildrenViewMode( viewmode[index] );
-			});
+			item.setAttribute( 'onClick', 'return ez_adminChildrenViewMode(' + viewmode[index] + ')' );
 		});
 	}
 }

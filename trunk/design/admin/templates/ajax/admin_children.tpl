@@ -15,17 +15,17 @@
 <div class="block">
 <div class="left">
     <p id="numberofitems">
-    	<a href={'/user/preferences/set/admin_list_limit/1'|ezurl} title="{'Show 10 items per page.'|i18n( 'design/admin/node/view/full' )}"{if $number_of_items|eq(10)} class="current"{/if} onClick="return fez_adminChildrenNumberOfItems(1)">10</a>
-        <a href={'/user/preferences/set/admin_list_limit/2'|ezurl} title="{'Show 25 items per page.'|i18n( 'design/admin/node/view/full' )}"{if $number_of_items|eq(25)} class="current"{/if} onClick="return fez_adminChildrenNumberOfItems(2)">25</a>
-		<a href={'/user/preferences/set/admin_list_limit/3'|ezurl} title="{'Show 50 items per page.'|i18n( 'design/admin/node/view/full' )}"{if $number_of_items|eq(50)} class="current"{/if} onClick="return fez_adminChildrenNumberOfItems(3)">50</a>
+    	<a href={'/user/preferences/set/admin_list_limit/1'|ezurl} title="{'Show 10 items per page.'|i18n( 'design/admin/node/view/full' )}"{if $number_of_items|eq(10)} class="current"{/if} onClick="return ez_adminChildrenNumberOfItems(1)">10</a>
+        <a href={'/user/preferences/set/admin_list_limit/2'|ezurl} title="{'Show 25 items per page.'|i18n( 'design/admin/node/view/full' )}"{if $number_of_items|eq(25)} class="current"{/if} onClick="return ez_adminChildrenNumberOfItems(2)">25</a>
+		<a href={'/user/preferences/set/admin_list_limit/3'|ezurl} title="{'Show 50 items per page.'|i18n( 'design/admin/node/view/full' )}"{if $number_of_items|eq(50)} class="current"{/if} onClick="return ez_adminChildrenNumberOfItems(3)">50</a>
     </p>
 </div>
 <div class="right">
 	<p id="viewmode">
 		{def $fez_view_mode=ezpreference( 'admin_children_viewmode' )}
-        <a onClick="return fez_adminChildrenViewMode( 'list' )"{if or($fez_view_mode|eq('list'), $fez_view_mode|eq(''))} class="current"{/if} href={'/user/preferences/set/admin_children_viewmode/list'|ezurl} title="{'Display sub items using a simple list.'|i18n( 'design/admin/node/view/full' )}">{'List'|i18n( 'design/admin/node/view/full' )}</a>
-        <a  onClick="return fez_adminChildrenViewMode( 'thumbnail' )"{if $fez_view_mode|eq('thumbnail')} class="current"{/if} href={'/user/preferences/set/admin_children_viewmode/thumbnail'|ezurl} title="{'Display sub items as thumbnails.'|i18n( 'design/admin/node/view/full' )}">{'Thumbnail'|i18n( 'design/admin/node/view/full' )}</a>
-        <a onClick="return fez_adminChildrenViewMode( 'detailed' )"{if $fez_view_mode|eq('detailed')} class="current"{/if} href={'/user/preferences/set/admin_children_viewmode/detailed'|ezurl} title="{'Display sub items using a detailed list.'|i18n( 'design/admin/node/view/full' )}">{'Detailed'|i18n( 'design/admin/node/view/full' )}</a>
+        <a onClick="return ez_adminChildrenViewMode( 'list' )"{if or($fez_view_mode|eq('list'), $fez_view_mode|eq(''))} class="current"{/if} href={'/user/preferences/set/admin_children_viewmode/list'|ezurl} title="{'Display sub items using a simple list.'|i18n( 'design/admin/node/view/full' )}">{'List'|i18n( 'design/admin/node/view/full' )}</a>
+        <a  onClick="return ez_adminChildrenViewMode( 'thumbnail' )"{if $fez_view_mode|eq('thumbnail')} class="current"{/if} href={'/user/preferences/set/admin_children_viewmode/thumbnail'|ezurl} title="{'Display sub items as thumbnails.'|i18n( 'design/admin/node/view/full' )}">{'Thumbnail'|i18n( 'design/admin/node/view/full' )}</a>
+        <a onClick="return ez_adminChildrenViewMode( 'detailed' )"{if $fez_view_mode|eq('detailed')} class="current"{/if} href={'/user/preferences/set/admin_children_viewmode/detailed'|ezurl} title="{'Display sub items using a detailed list.'|i18n( 'design/admin/node/view/full' )}">{'Detailed'|i18n( 'design/admin/node/view/full' )}</a>
 		{undef $fez_view_mode}
 	</p>
 </div>
